@@ -74,10 +74,8 @@ h2{
     background-position:center ;
     width:auto;
     height: 50px;
-    }
-
-.Comunicaciones
-{
+}
+.Comunicaciones{
     background-color: #6af7a0;
     font-family: sans-serif;
     text-align: center;
@@ -85,27 +83,21 @@ h2{
     height: 400px;
 
 }
-
-.Experiencia_con
-{
+.Experiencia_con{
     background-color: #f7a56a;
     font-family: sans-serif;
     text-align: center;
     width: 100%;
     height: 400px;
 }
-
-.Proyectos_Realizados_Con
-{
+.Proyectos_Realizados_Con{
     background-color: #896af7;
     font-family: sans-serif;
     text-align: center;
     width: 100%;
     height: 400px;
 }
-
-.Sobre_mi
-{
+.Sobre_mi{
     background-color: #6AF7EC;
     font-family: sans-serif;
     text-align: center;
@@ -113,12 +105,38 @@ h2{
     height: 500px;
 
 }
-
-
-
-
 footer {
     text-align: center;
     color: #6c757d;
     margin-top: auto;
 }
+
+
+body {
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .Imagen {
+    height: 150px;
+    object-fit: contain;
+    margin-right: 5px; /* Espacio entre imágenes */
+    width: calc((100vw - 20px) / 4); /* Ajusta el tamaño según la cantidad de imágenes y el espacio entre ellas */
+    animation: desplazamiento 16s linear infinite; /* Duración total de la animación */
+  }
+  @keyframes desplazamiento {
+    0% {
+      transform: translateX(calc(100% + 10px));
+    }
+  
+    100% {
+      transform: translateX(calc(-400% - 30px));
+    }
+  }
+  
+  
