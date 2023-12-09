@@ -115,21 +115,27 @@ footer {
 body {
     margin: 0;
     overflow: hidden;
+    
   }
   
   .container {
     display: flex;
-    overflow: hidden;
+    white-space: nowrap;
+    align-items: center;
+   
   }
   
   .Imagen {
-    height: 150px;
+    width: 10px;
+    height: 70px;
     object-fit: contain;
-    margin-right: 5px; /* Espacio entre imágenes */
-    width: calc((100vw - 20px) / 4); /* Ajusta el tamaño según la cantidad de imágenes y el espacio entre ellas */
+    margin-right: 10px; /* Espacio entre imágenes */
+    width: calc((100vw - 20px) / 5); /* Ajusta el tamaño según la cantidad de imágenes y el espacio entre ellas */
+    transform: translateX(-20px);
     animation: desplazamiento 16s linear infinite; /* Duración total de la animación */
   }
-  @keyframes desplazamiento {
+
+    @keyframes desplazamiento {
     0% {
       transform: translateX(calc(100% + 10px));
     }
