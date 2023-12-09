@@ -114,35 +114,54 @@ footer {
 
 body {
     margin: 0;
+    padding: 0;
     overflow: hidden;
-    
-  }
-  
-  .container {
-    display: flex;
+    justify-content: center;
+    align-items: center;  
+  } 
+  .container {  
     white-space: nowrap;
-    align-items: center;
-   
-  }
-  
+    align-items: bottom;
+  }  
   .Imagen {
-    width: 10px;
+    
     height: 70px;
     object-fit: contain;
-    margin-right: 10px; /* Espacio entre imágenes */
-    width: calc((100vw - 20px) / 5); /* Ajusta el tamaño según la cantidad de imágenes y el espacio entre ellas */
+    margin-right: 50px; /* Espacio entre imágenes */
+    width: calc((100vw - 20px) / 8); /* Ajusta el tamaño según la cantidad de imágenes y el espacio entre ellas */
     transform: translateX(-20px);
-    animation: desplazamiento 16s linear infinite; /* Duración total de la animación */
+    animation: desplazamiento 10s linear infinite; /* Duración total de la animación */
   }
-
     @keyframes desplazamiento {
     0% {
-      transform: translateX(calc(100% + 10px));
+      transform: translateX(calc(50% + 10px));
     }
   
     100% {
-      transform: translateX(calc(-400% - 30px));
+      transform: translateX(calc(-50% - 30px));
     }
   }
-  
-  
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    width: 100%;
+     /* Asegura que el contenedor ocupe al menos el 100% del viewport height */
+}
+
+.elemento {
+    width: 8%;  
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+    align-items: center;
+    /* Puedes personalizar estilos para cada elemento según sea necesario */
+  }
+.elemento:hover {
+    transform: scale(1.05);
+    border: 1px solid #fff; /* Cambia el borde al pasar el ratón */
+      }
+      
