@@ -1,15 +1,14 @@
-
-  /* Encabezado */
+/* Encabezado */
 
 .Encabezado_Grid{
     display: flex;
-    flex-direction: column;
-    background-color: rgb(51, 51, 51); /* Color de fondo del encabezado */
+    
+    background-color: rgb(80, 92, 99); /* Color de fondo del encabezado */
     color: #fff; /* Color de texto del encabezado */
     padding: 15px 0; /* Espaciado interno superior e inferior del encabezado */font-family: 'Arial', sans-serif;
     font-size: 20px;
     line-height: 50px;
-    grid-template-rows: auto;
+    
 
 }
 
@@ -21,9 +20,26 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     white-space: pre-line;
 
+
     
 }
+.Encabezado_Imagen {
+  width: 40%;
+  height: auto;
 
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  white-space: pre-line;
+  background-repeat: no-repeat; 
+  background-image: url('Logos/Cv personal.png');
+  background-size: contain; /* Ajusta el tamaño de la imagen de fondo */
+  background-position: center; /* Centra la imagen de fondo */
+  background-size: 25%;
+
+}
 
 
 h2{
