@@ -1,17 +1,24 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const pages = document.querySelectorAll('.page');
+document.addEventListener("DOMContentLoaded", function() {
+    var clients = document.querySelectorAll(".client");
+    var index = 0;
+    var groupSize = 4;
+    var interval = 5000; // Cambia esto para ajustar el intervalo de cambio
 
-    window.addEventListener('scroll', function () {
-        let currentScroll = window.scrollY;
-
-        pages.forEach((page, index) => {
-            const offset = page.offsetTop;
-
-            if (currentScroll >= offset && currentScroll < offset + page.offsetHeight) {
-                page.classList.add('visible');
-            } else {
-                page.classList.remove('visible');
-            }
+    function toggleClients() {
+        clients.forEach(function(client) {
+            client.classList.remove("active");
         });
-    });
+        for (var i = index; i < index + groupSize; i++) {
+            if (clients[i]) {
+                clients[i].classList.add("active");
+            }
+        }
+        index += groupSize;
+        if (index >= clients.length) {
+            index = 0;
+        }
+    }
+
+    toggleClients();
+    setInterval(toggleClients, interval);
 });
