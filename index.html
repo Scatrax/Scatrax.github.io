@@ -1,295 +1,320 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Jon Garcia</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jon Garcia — PLC & SCADA Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <img src="Logos/JG.jpg" alt="Logo de la empresa" class="logo">
-                <div class="menu-toggle" id="mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#about">Sobre Mi</a></li>
-                    <li><a href="#services">Softwares</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#clients">Clientes</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-text">
-                <h1>JON GARCIA</h1>
-                <p>Programador de autómatas y scada</p>
-                <div class="contact-buttons">
-                    <a href="mailto:cv@elprogramador.es" class="btn">
-                        <img src="Logos/mail.png" alt="Correo">
-                    </a>
-                    <a href="https://www.linkedin.com/in/jon-g-482862229/" target="_blank" class="btn">
-                        <img src="Logos/linkedin.png" alt="LinkedIn">
-                    </a>
-                </div>
-            </div>
+  <!-- NAVBAR -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">JG<em>.</em></a>
+      <ul class="nav-links" id="navList">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#career">Trayectoria</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#clients">Clientes</a></li>
+      </ul>
+      <a href="mailto:cv@elprogramador.es" class="nav-cta">Contactar</a>
+      <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about">Sobre mí</a>
+    <a href="#career">Trayectoria</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#stack">Stack</a>
+    <a href="#clients">Clientes</a>
+    <a href="mailto:cv@elprogramador.es">cv@elprogramador.es</a>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="hero-inner">
+    <div class="hero-main">
+      <div class="hero-right">
+        <div class="hr-corner">
+          <span></span>
         </div>
-    </section>
-
-    <section id="about" class="about section">
-        <div class="container">
-            <h2>SOBRE MI</h2>
-            <p>¡Hola y bienvenido/a a mi web personal! Soy Jon, un apasionado técnico de control con una experiencia de
-                4 años en el emocionante mundo de la automatización industrial. Con 26 años de edad, he tenido el
-                privilegio de trabajar con tecnologías avanzadas como los PLCs y SCADAs de Siemens.</p>
-            <p>Mi viaje profesional hasta ahora ha sido una aventura fascinante, donde he tenido la oportunidad de
-                desarrollar soluciones innovadoras para crear y optimizar procesos industriales. Mi enfoque se centra en
-                la integración de sistemas, la programación eficiente y la mejora continua para garantizar el máximo
-                rendimiento y eficiencia en cada proyecto.</p>
-            <p>¡Gracias por visitar mi web y espero que disfrutes explorando mi trabajo tanto como yo disfruté
-                creándolo!</p>
+        <div class="hr-center">
+          <div class="hr-monogram">JG<span class="hr-monogram-dot">.</span></div>
+          <div class="hr-divider"></div>
+          <div class="hr-tag">PLC · SCADA · Bilbao</div>
         </div>
-    </section>
-
-    <section id="career-path" class="career-path section">
-        <div class="container">
-            <h2>TRAYECTORIA</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2023 - Presente</h3>
-                        <p>GERTEK</p>
-                        <p>Programador PLC y Scada</p>
-                        <p>Analista Programador</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2022 - 2023</h3>
-                        <p>SIDENOR</p>
-                        <p>Programador PLC y Scada</p>
-                        <p>Mantenimiento Electrico</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2020 - 2022</h3>
-                        <p>AVACON</p>
-                        <p>Programador PLC y Scada</p>
-                        <p>Mantenimiento de PLC</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2018 - 2018</h3>
-                        <p>MECA</p>
-                        <p>Mantenimiento Electrico</p>
-                        <p>Cuadrista Electrico</p>
-                    </div>
-                </div>
-            </div>
+        <div class="hr-foot">
         </div>
-    </section>
-    <section id="projects" class="projects section">
-        <div class="container">
-            <h2>PROYECTOS DESTACADOS</h2>
-            <div class="project-list">
-                <div class="project">
-                    <img src="Img_Proyectos/Depuradora.jpg" alt="Tratamiento de aguas">
-                    <div class="project-info">
-                        <h3>Tratamiento de aguas</h3>
-                        <p> Desarrolle una avanzada planta depuradora para Incarlopsa. 
-                            Utilizando las series S7 de siemens (1500, 1200, 400, 300). 
-                            El sistema incluyo un Reactor Biológico Secuencial, Tanque de Homogeneización y un sistema DAF. 
-                            Además, integramos equipos de otros fabricantes, como centrifugadoras y tamizadores. </p>
-                    </div>
-                </div>
-                <div class="project">
-                    <img src="Img_Proyectos/Piscina.jpeg" alt="Bombeo piscinas">
-                    <div class="project-info">
-                        <h3>Bombeo de piscinas</h3>
-                        <p> Llevamos a cabo la integración de un S7-1200 para optimizar el sistema de bombeo de la piscina del Colegio Urdaneta. 
-                            Este proyecto incluyó la programación y configuración del PLC para gestionar eficientemente el control del bombeo, mejorando la calidad del agua y garantizando un funcionamiento seguro y fiable.</p>
-                    </div>
-                </div>
-                <div class="project">
-                    <img src="Img_Proyectos/tunel.jpeg" alt="Tuneles">
-                    <div class="project-info">
-                        <h3>Túneles</h3>
-                        <p> Realizamos la integración de una nueva galería en el túnel de Zaldíbar y actualizamos el sistema del túnel con nuevos CLVs, SAF, METEOS y otros dispositivos avanzados. 
-                            Se utilizó WinCC OA y S7-400H para la supervisión y control, garantizando alta disponibilidad y fiabilidad del sistema. 
-                            Este proyecto incluyó la instalación y configuración de equipos de última generaciòn para mejorar la seguridad y la eficiencia operativa del túnel. 
-                            La implementación de estos sistemas avanzados permite una mejor gestión del tráfico, monitorización ambiental y respuesta a emergencias, garantizando un tránsito seguro y optimizado.</p>
-                    </div>
-                </div>
-                <div class="project">
-                    <img src="Img_Proyectos/vidrala.jpeg" alt="Vidrala">
-                    <div class="project-info">
-                        <h3>Vidrio</h3>
-                        <p> Se integraron dos PLC S7-1200 y un HMI para controlar las bombas que envían agua a los refrigeradores, utilizando una conexión IPSec y dos router Scalance 3G. 
-                            Este proyecto mejoró la eficiencia y fiabilidad del sistema de refrigeración, asegurando un control preciso y seguro del flujo de agua. 
-                            La incorporación del HMI permite una supervisión y control intuitivo del sistema, mientras que la conexión IPSec y los Scalance 3G garantizan una comunicación robusta y segura entre los dispositivos.</p>
-                    </div>
-                </div>
-                <div class="project">
-                    <img src="Img_Proyectos/termopan.jpeg" alt="Lineas">
-                    <div class="project-info">
-                        <h3>Líneas de producción</h3>
-                        <p> Se integraron dos líneas de producción de bollería industrial para la empresa Termopan, utilizando dos PLC S7-1500 y un HMI Comfort. 
-                            Este proyecto optimizó el control y monitoreo de las líneas de producción, mejorando la eficiencia operativa y la productividad. 
-                            La utilización de PLC S7-1500 proporciona un control preciso y fiable, mientras que el HMI Comfort ofrece una interfaz intuitiva para la supervisión y gestión de los procesos.</p>
-                    </div>
-                </div>
-                <div class="project">
-                    <img src="Img_Proyectos/Cuadro electrico.jpeg" alt="Mantenimiento electrico">
-                    <div class="project-info">
-                        <h3>Mantenimiento eléctrico</h3>
-                        <p> Realicé tareas de mantenimiento eléctrico, incluyendo la realización de cuadros eléctricos, lectura de esquemas, y solución de problemas eléctricos. Además, llevé a cabo mantenimiento correctivo y preventivo de máquinas eléctricas. 
-                            Montaje de cuadros eléctricos hasta la detección y resolución de fallas en los sistemas eléctricos, garantizando un servicio eficiente y seguro, y asegurando la continuidad y fiabilidad de las operaciones eléctricas y de maquinaria.</p>
-                    </div>
-                </div>
-
-            </div>
+      </div>
+      <div class="hero-left">
+        <div>
+          <div class="hero-eyebrow">Automatización Industrial · Bilbao</div>
+          <h1 class="hero-name">JON<br>GARCIA</h1>
         </div>
-    </section>
-    <section id="services" class="services section">
-        <div class="container">
-            <h2>STACK INDUSTRIAL</h2>
-            <div class="services-grid">
-                <div class="service">
-                    <img src="Logos/tia portal logo.jpg" alt="Tia Portal">
-                    <div class="service-info">
-                        <h3>Tia Portal</h3>
-                        <p>Un entorno de ingeniería integrado para la configuración y programación de PLCs y HMIs de Siemens.</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <img src="Logos/logo step 7.jpg" alt="Step 7">
-                    <div class="service-info">
-                        <h3>Step 7</h3>
-                        <p>Software de programación para los controladores lógicos programables de Siemens.</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <img src="Logos/winccOA_256x256.jpg" alt="WinCC OA">
-                    <div class="service-info">
-                        <h3>WinCC OA</h3>
-                        <p>Plataforma SCADA avanzada para la supervisión y control de procesos industriales complejos.</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <img src="Logos/wincc.png" alt="WinCC V7">
-                    <div class="service-info">
-                        <h3>WinCC V7</h3>
-                        <p>Software SCADA utilizado para la visualización y operación de sistemas de automatización.</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <img src="Logos/mariadb.png" alt="Maria DB">
-                    <div class="service-info">
-                        <h3>Maria DB</h3>
-                        <p>Sistema de gestión de bases de datos relacionales, compatible con MySQL.</p>
-                    </div>
-                </div>
-            </div>
+        <p class="hero-desc">Especialista en programación de autómatas PLC y sistemas SCADA. Integrador de soluciones industriales con tecnología Siemens en infraestructura crítica, industria alimentaria y manufactura.</p>
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <div class="hero-bottom-cell"><div class="hbc-label">Especialidad</div><div class="hbc-value">PLC & SCADA</div></div>
+      <div class="hero-bottom-cell"><div class="hbc-label">Plataforma</div><div class="hbc-value">Siemens</div></div>
+      <div class="hero-bottom-cell"><div class="hbc-label">Empresa actual</div><div class="hbc-value">Gertek</div></div>
+      <div class="hero-bottom-cell"><div class="hbc-label">Email</div><div class="hbc-value">cv@elprogramador.es</div></div>
+    </div>
+    </div><!-- /hero-inner -->
+  </header>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="sec-head reveal"><span class="sec-num">01</span><h2 class="sec-title">Sobre mí</h2></div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>Soy Jon, técnico de control especializado en automatización industrial. Con <span id="edad">28</span> años, he trabajado con tecnologías avanzadas de Siemens en proyectos de alta exigencia técnica.</p>
+        <p>Mi enfoque se centra en la <strong>integración de sistemas</strong>, la programación eficiente y la mejora continua. Desde depuradoras de agua hasta túneles de infraestructura vial crítica, cada proyecto es una oportunidad de llevar la automatización al siguiente nivel.</p>
+        <p>Trabajo con las series S7 de Siemens (300, 400H, 1200, 1500,1500H), entornos SCADA como WinCC OA y TIA Portal, y protocolos industriales como Profinet, Profibus, Modbus TCP y OPC-UA. <strong>Cuento con certificaciones oficiales en TIA Portal, WinCC OA y AVEVA System Platform.</strong></p>
+      </div>
+      <div class="spec-card reveal">
+        <div class="spec-card-head">// Ficha técnica</div>
+        <div class="spec-row"><span class="spec-k">Nombre</span><span class="spec-v">Jon Garcia</span></div>
+        <div class="spec-row"><span class="spec-k">Edad</span><span class="spec-v"><span id="edad2">28</span> años</span></div>
+        <div class="spec-row"><span class="spec-k">Ubicación</span><span class="spec-v">Bilbao, País Vasco</span></div>
+        <div class="spec-row"><span class="spec-k">Empresa actual</span><span class="spec-v">Gertek</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER -->
+  <section class="section section-alt" id="career">
+    <div class="section-inner">
+    <div class="sec-head reveal"><span class="sec-num">02</span><h2 class="sec-title">Trayectoria</h2></div>
+    <div>
+      <div class="tl-row reveal">
+        <div class="tl-year">2023 — Presente</div>
+        <div class="tl-body">
+          <div class="tl-company">GERTEK</div>
+          <div class="tl-role">Programador PLC & SCADA · Analista Programador</div>
+          
+          
         </div>
-    </section>
-    
-
-    <section id="communications" class="communications section">
-        <div class="container">
-            <h2>COMUNICACIONES INDUSTRIALES</h2>
-            <div class="services-grid">
-                <div class="service">
-                    <img src="Logos/profinet_400_130.png" alt="Profinet">
-                    <div class="service-info">
-                        <h3>Profinet</h3>
-                        <p>Protocolo de comunicación industrial para la automatización basado en Ethernet.</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <img src="Logos/profibus 400_130.png" alt="Profibus">
-                    <div class="service-info">
-                        <h3>Profibus</h3>
-                        <p>Bus de campo estándar utilizado para la comunicación entre dispositivos de automatización.</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <img src="Logos/Modbus.png" alt="Modbus TCP">
-                    <div class="service-info">
-                        <h3>Modbus TCP</h3>
-                        <p>Protocolo de comunicación utilizado en redes industriales para conectar dispositivos electrónicos.</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <img src="Logos/OpcUA.png" alt="OPC-UA">
-                    <div class="service-info">
-                        <h3>OPC-UA</h3>
-                        <p>Estándar de comunicación para la interoperabilidad segura y confiable en la automatización industrial.</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <img src="Logos/IO-Link-Logo.png" alt="IO-LINK">
-                    <div class="service-info">
-                        <h3>IO-LINK</h3>
-                        <p>Tecnología de comunicación punto a punto para conectar sensores y actuadores a un sistema de control.</p>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="tl-row reveal">
+        <div class="tl-year">2022 — 2023</div>
+        <div class="tl-body">
+          <div class="tl-company">SIDENOR</div>
+          <div class="tl-role">Programador PLC & SCADA · Mantenimiento Eléctrico</div>
+          
+          
         </div>
-    </section>
-
-
-
-    <section id="clients" class="clients section">
-        <div class="container">
-            <h2>CLIENTES</h2>
-            <div class="client-list">
-                <div class="client">
-                    <img src="Clientes/Sidenor.png" alt="Sidenor">
-                </div>
-                <div class="client">
-                    <img src="Clientes/hidroambiente.png" alt="Hidroambiente">
-                </div>
-                <div class="client">
-                    <img src="Clientes/incarlopsa.png" alt="Incarlopsa">
-                </div>
-                <div class="client">
-                    <img src="Clientes/Sarralle.png" alt="Sarralle">
-                </div>
-                <div class="client">
-                    <img src="Clientes/Interbiak.png" alt="Interbiak">
-                </div>
-                <div class="client">
-                    <img src="Clientes/cobra.jpg" alt="Cobra">
-                </div>
-                <div class="client">
-                    <img src="Clientes/Artiach.png" alt="Artiach">
-                </div>
-                <div class="client">
-                    <img src="Clientes/Envases.png" alt="Envases">
-                </div>
-            </div>
+      </div>
+      <div class="tl-row reveal">
+        <div class="tl-year">2020 — 2022</div>
+        <div class="tl-body">
+          <div class="tl-company">AVACON</div>
+          <div class="tl-role">Programador PLC & SCADA · Mantenimiento de PLC</div>
+          
+          
         </div>
-    </section>
-
-    <footer id="contact">
-        <div class="container">
-            <p>&copy; 2024 Jon Garcia. Todos los derechos reservados.</p>
-            <p><a href="mailto:cv@elprogramador.es">cv@elprogramador.es</a></p>
+      </div>
+      <div class="tl-row reveal">
+        <div class="tl-year">2018</div>
+        <div class="tl-body">
+          <div class="tl-company">MECA</div>
+          <div class="tl-role">Mantenimiento Eléctrico · Cuadrista Eléctrico</div>
+         
         </div>
-    </footer>
+      </div>
+    </div>
+    </div><!-- /section-inner -->
+  </section>
 
-    <script src="script.js"></script>
+  <!-- PROJECTS -->
+<section class="section" id="projects">
+    <div class="sec-head reveal"><span class="sec-num">03</span><h2 class="sec-title">Proyectos</h2></div>
+    <div class="proj-grid reveal">
+      <div class="proj-card wide">
+        <img class="proj-img" src="Img_Proyectos\tunel.jpeg" alt="Túnel">
+        <div class="proj-label">
+          <div class="proj-idx">01 — Infraestructura crítica</div>
+          <div class="proj-name">Túnel de Zaldíbar</div>
+          <div class="proj-sub">Actualización a S7-1500H y retirada de S7-300 y S7-400H. WinCC OA.</div>
+        </div>
+      </div>
+      <div class="proj-card wide">
+        <img class="proj-img" src="Img_Proyectos\Depuradora.jpg" alt="Depuradora">
+        <div class="proj-label">
+          <div class="proj-idx">02 — Tratamiento de aguas</div>
+          <div class="proj-name">Depuradora Incarlopsa</div>
+          <div class="proj-sub">S7-1500/1200/400/300. Reactor Biológico Secuencial y DAF.</div>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <img class="proj-img" src="Img_Proyectos\termopan.jpeg" alt="Termopan">
+        <div class="proj-label">
+          <div class="proj-idx">04 — Manufactura</div>
+          <div class="proj-name">Líneas de producción</div>
+          <div class="proj-sub">Bollería industrial Termopan. S7-1500 + HMI Comfort.</div>
+        </div>
+      </div>
+      <div class="proj-card">
+        <img class="proj-img" src="Img_Proyectos\vidrala.jpeg" alt="Vidrala">
+        <div class="proj-label">
+          <div class="proj-idx">05 — Vidrio</div>
+          <div class="proj-name">Refrigeración industrial</div>
+          <div class="proj-sub">S7-1200 + IPSec + Scalance 3G. Control preciso de bombas.</div>
+        </div>
+      </div>
+      <div class="proj-card">
+        <img class="proj-img" src="Img_Proyectos\Piscina.jpeg" alt="Piscina">
+        <div class="proj-label">
+          <div class="proj-idx">06 — Servicios</div>
+          <div class="proj-name">Bombeo piscinas</div>
+          <div class="proj-sub">S7-1200 para el Colegio Urdaneta. Eficiencia y seguridad.</div>
+        </div>
+      </div>
+      <div class="proj-card">
+        <img class="proj-img" src="Img_Proyectos\Cuadro electrico.jpeg" alt="Cuadros">
+        <div class="proj-label">
+          <div class="proj-idx">07 — Eléctrico</div>
+          <div class="proj-name">Mantenimiento eléctrico</div>
+          <div class="proj-sub">Cuadros, esquemas y mantenimiento correctivo y preventivo.</div>
+        </div>
+      </div>
+      <div class="proj-card">
+        <img class="proj-img" src="Img_Proyectos\AvanzadaTunel.jpg" alt="Túnel Avanzada">
+        <div class="proj-label">
+          <div class="proj-idx">08 — Infraestructura · Mantenimiento SCADA</div>
+          <div class="proj-name">Túnel de Avanzada</div>
+          <div class="proj-sub">Mantenimiento y supervisión del sistema SCADA del túnel. WinCC OA, control de dispositivos de campo y gestión de alarmas.</div>
+        </div>
+      </div>
+<div class="proj-card">
+        <img class="proj-img" src="Img_Proyectos\MetroBilbaoCentroControl.jpg" alt="Metro Bilbao">
+        <div class="proj-label">
+          <div class="proj-idx">09 — Transporte · Mantenimiento</div>
+          <div class="proj-name">Metro de Bilbao</div>
+          <div class="proj-sub">Mejora y mantenimiento de las instalaciones e instalación de aparcabicis.</div>
+        </div>
+      </div>
+      <div class="proj-card">
+        <img class="proj-img" src="Img_Proyectos\CentroControlGerediaga.jpg" alt="Centro Gerediaga">
+        <div class="proj-label">
+          <div class="proj-idx">10 — Mantenimiento SCADA</div>
+          <div class="proj-name">Centro de control Gerediaga</div>
+          <div class="proj-sub">Mantenimiento preventivo y correctivo del SCADA. Integración de nuevos dispositivos y actualización de pantallas.</div>
+        </div>
+      </div>
+      <div class="proj-card">
+        <img class="proj-img" src="Img_Proyectos\CentroControlMKZ.jpg" alt="Centro MKZ">
+        <div class="proj-label">
+          <div class="proj-idx">11 — Mantenimiento SCADA</div>
+          <div class="proj-name">Centro de control MKZ</div>
+          <div class="proj-sub">Mantenimiento del sistema SCADA MKZ. Control de infraestructura vial y monitorización continua de sistemas críticos.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="section section-alt" id="stack">
+    <div class="section-inner">
+    <div class="sec-head reveal"><span class="sec-num">04</span><h2 class="sec-title">Stack Industrial</h2></div>
+
+    <div class="stack-block reveal">
+      <div class="stack-block-label">Software</div>
+      <div class="stack-row">
+        <div class="stack-cell"><img class="stack-logo" src="Logos/tia portal logo.jpg" alt=""><div><div class="stack-text-name">TIA Portal</div><div class="stack-text-desc">Entorno integrado PLC & HMI Siemens</div></div></div>
+        <div class="stack-cell"><img class="stack-logo" src="Logos/logo step 7.jpg" alt=""><div><div class="stack-text-name">Step 7</div><div class="stack-text-desc">Programación PLC S7-300/400H</div></div></div>
+        <div class="stack-cell"><img class="stack-logo" src="Logos/winccOA_256x256.jpg" alt=""><div><div class="stack-text-name">WinCC OA</div><div class="stack-text-desc">SCADA para infraestructura crítica</div></div></div>
+        <div class="stack-cell"><img class="stack-logo" src="Logos/wincc.png" alt=""><div><div class="stack-text-name">WinCC V7</div><div class="stack-text-desc">Visualización SCADA industrial</div></div></div>
+        <div class="stack-cell"><img class="stack-logo" src="Logos/mariadb.png" alt=""><div><div class="stack-text-name">Maria DB</div><div class="stack-text-desc">Gestión de bases de datos</div></div></div>
+        <div class="stack-cell"><img class="stack-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""><div><div class="stack-text-name">Git</div><div class="stack-text-desc">Control de versiones de proyectos</div></div></div>
+      </div>
+    </div>
+
+    <div class="stack-block reveal">
+      <div class="stack-block-label" style="color:var(--blue)">Protocolos de comunicación</div>
+      <div class="stack-row">
+        <div class="stack-cell"><img class="stack-logo" src="Logos/profinet_400_130.png" alt=""><div><div class="stack-text-name">Profinet</div><div class="stack-text-desc">Ethernet industrial</div></div></div>
+        <div class="stack-cell"><img class="stack-logo" src="Logos/profibus 400_130.png" alt=""><div><div class="stack-text-name">Profibus</div><div class="stack-text-desc">Bus de campo estándar</div></div></div>
+        <div class="stack-cell"><img class="stack-logo" src="Logos/Modbus.png" alt=""><div><div class="stack-text-name">Modbus TCP</div><div class="stack-text-desc">Protocolo red industrial</div></div></div>
+        <div class="stack-cell"><img class="stack-logo" src="Logos/OpcUA.png" alt=""><div><div class="stack-text-name">OPC-UA</div><div class="stack-text-desc">Interoperabilidad segura</div></div></div>
+        <div class="stack-cell"><img class="stack-logo" src="Logos/IO-Link-Logo.png" alt=""><div><div class="stack-text-name">IO-Link</div><div class="stack-text-desc">Sensores y actuadores</div></div></div>
+        <div class="stack-cell"><img class="stack-logo" src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Mqtt-hor.svg" alt=""><div><div class="stack-text-name">Mosquitto MQTT</div><div class="stack-text-desc">Broker IoT para telemetría industrial</div></div></div>
+      </div>
+    </div>
+    </div><!-- /section-inner -->
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="section" id="clients">
+    <div class="sec-head reveal"><span class="sec-num">05</span><h2 class="sec-title">Clientes</h2></div>
+    <div class="clients-strip">
+      <div class="clients-track">
+        <img class="client-img" src="Clientes\Sidenor.png" alt="Sidenor">
+        <img class="client-img" src="Clientes\hidroambiente.png" alt="Hidroambiente">
+        <img class="client-img" src="Clientes\incarlopsa.png" alt="Incarlopsa">
+        <img class="client-img" src="Clientes\Sarralle.png" alt="Sarralle">
+        <img class="client-img" src="Clientes\Interbiak.png" alt="Interbiak">
+        <img class="client-img" src="Clientes\cobra.jpg" alt="Cobra">
+        <img class="client-img" src="Clientes\Artiach.png" alt="Artiach">
+        <img class="client-img" src="Clientes\Envases.png" alt="Envases">
+        <img class="client-img" src="Clientes\diputacion_bizkaia.jpg" alt="Diputación de Bizkaia">
+        <img class="client-img" src="Clientes\Logo_Metro_Bilbao.png" alt="Metro Bilbao">
+        <img class="client-img" src="Clientes\Vidrala.jpg" alt="Vidrala">
+        <img class="client-img" src="Clientes\Sidenor.png" alt="Sidenor">
+        <img class="client-img" src="Clientes\hidroambiente.png" alt="Hidroambiente">
+        <img class="client-img" src="Clientes\incarlopsa.png" alt="Incarlopsa">
+        <img class="client-img" src="Clientes\Sarralle.png" alt="Sarralle">
+        <img class="client-img" src="Clientes\Interbiak.png" alt="Interbiak">
+        <img class="client-img" src="Clientes\cobra.jpg" alt="Cobra">
+        <img class="client-img" src="Clientes\Artiach.png" alt="Artiach">
+        <img class="client-img" src="Clientes\Envases.png" alt="Envases">
+        <img class="client-img" src="Clientes\diputacion_bizkaia.jpg" alt="Diputación de Bizkaia">
+        <img class="client-img" src="Clientes\Logo_Metro_Bilbao.png" alt="Metro Bilbao">
+        <img class="client-img" src="Clientes\Vidrala.jpg" alt="Vidrala">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-alt" id="contact">
+    <div class="section-inner">
+    <div class="sec-head reveal"><span class="sec-num">06</span><h2 class="sec-title">Contacto</h2></div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-big">¿Tienes<br>un <span class="hl">proyecto</span><br><span class="stroke">en mente?</span></div>
+        <p class="contact-sub">Abierto a proyectos individuales de automatización industrial, integración PLC/SCADA y consultoría técnica Siemens. No busco cambio de empresa.</p>
+      </div>
+      <div class="reveal">
+        <div class="contact-links">
+          <a href="mailto:cv@elprogramador.es" class="contact-link">
+            <div class="cl-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+            <div class="cl-info"><div class="cl-type">Email</div><div class="cl-value">cv@elprogramador.es</div></div>
+            <span class="cl-arrow">↗</span>
+          </a>
+          <a href="https://www.linkedin.com/in/jon-g-482862229/" target="_blank" class="contact-link">
+            <div class="cl-icon"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></div>
+            <div class="cl-info"><div class="cl-type">Linkedin</div><div class="cl-value">Jon Garcia</div></div>
+            <span class="cl-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    </div><!-- /section-inner -->
+  </section>
+
+  <footer>
+  <div class="footer-inner">
+    <div class="footer-logo">JG.</div>
+    <div class="footer-txt">© 2026 Jon Garcia — Todos los derechos reservados.</div>
+    </div><!-- /footer-inner -->
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

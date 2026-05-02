@@ -1,27 +1,41 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let clients = document.querySelectorAll(".client");
-    let index = 0;
-    const groupSize = 4;
-    const interval = 1500; // Intervalo de cambio
+// ─── Auto-calculate age (nacido en 1997) ─────────────────────
+const birthYear = 1997, birthMonth = 0, birthDay = 1; // ajusta mes/día si quieres
+const today = new Date();
+let age = today.getFullYear() - birthYear;
+if (today.getMonth() < birthMonth || (today.getMonth() === birthMonth && today.getDate() < birthDay)) age--;
+document.querySelectorAll('#edad, #edad2').forEach(el => el.textContent = age);
 
-    function toggleClients() {
-        clients.forEach(client => client.style.display = 'none');
-        for (let i = index; i < index + groupSize; i++) {
-            if (clients[i]) {
-                clients[i].style.display = 'block';
-            }
-        }
-        index = (index + groupSize) % clients.length;
+// ─── Scroll reveal on viewport entry ─────────────────────────
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
     }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-    toggleClients();
-    setInterval(toggleClients, interval);
+// ─── Compact navbar on scroll ────────────────────────────────
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('compact', scrollY > 60));
 
-    // Menu toggle for mobile view
-    const menuToggle = document.querySelector("#mobile-menu");
-    const navLinks = document.querySelector(".nav-links");
-
-    menuToggle.addEventListener("click", function() {
-        navLinks.classList.toggle("active");
-    });
+// ─── Active nav link highlight ───────────────────────────────
+const secs = document.querySelectorAll('section[id], header[id]');
+const links = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  secs.forEach(s => { if (scrollY >= s.offsetTop - 120) cur = s.id; });
+  links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
 });
+
+// ─── Mobile burger menu ──────────────────────────────────────
+document.getElementById('burger').addEventListener('click', () =>
+  document.getElementById('mobileNav').classList.toggle('open'));
+
+document.querySelectorAll('#mobileNav a').forEach(a =>
+  a.addEventListener('click', () => document.getElementById('mobileNav').classList.remove('open')));
+
+// ─── Auto-update copyright year ──────────────────────────────
+const currentYear = new Date().getFullYear();
+document.querySelector('.footer-txt').textContent = `© ${currentYear} Jon Garcia — Todos los derechos reservados.`;
