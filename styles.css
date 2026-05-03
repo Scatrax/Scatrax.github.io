@@ -15,7 +15,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body { font-family: var(--body); background: var(--white); color: var(--ink); overflow-x: hidden; }
 
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
@@ -164,7 +164,7 @@ nav.compact { height: 52px; }
 .stack-badge { width: 44px; height: 44px; background: var(--line); display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 0.55rem; color: var(--mid); flex-shrink: 0; }
 
 /* CLIENTS */
-.clients-strip { overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 2.5rem 0; mask-image: linear-gradient(90deg,transparent,black 8%,black 92%,transparent); }
+.clients-strip { overflow: hidden; position: relative; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 2.5rem 0; mask-image: linear-gradient(90deg,transparent,black 8%,black 92%,transparent); -webkit-mask-image: linear-gradient(90deg,transparent,black 8%,black 92%,transparent); }
 .clients-track { display: flex; align-items: center; gap: 5rem; animation: marquee 22s linear infinite; width: max-content; }
 .clients-strip:hover .clients-track { animation-play-state: paused; }
 @keyframes marquee { 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
