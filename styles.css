@@ -214,4 +214,13 @@ footer { background: var(--dark); color: rgba(255,255,255,0.35); }
   .proj-card.wide { grid-column: span 1; }
   .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .footer-inner { flex-direction: column; gap: 0.5rem; padding: 1.5rem; text-align: center; }
+    /* FIX TRAYECTORIA - Centrado en móvil */
+  .tl-row { grid-template-columns: 1fr; text-align: left; }
+  .tl-year { border-right: none; border-bottom: 1px solid var(--line); text-align: left; padding: 1rem 0 0.5rem 0; }
+  .tl-body { padding: 1rem 0 1.5rem 0; }
+  
+  /* FIX CONTACTO - Links centrados en móvil */
+  .contact-links { margin: 0 auto; max-width: 100%; }
+  .contact-big { text-align: center; }
+  .contact-sub { text-align: center; margin-left: auto; margin-right: auto; }
 }
