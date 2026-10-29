@@ -123,4 +123,4 @@ document.getElementById('contactForm').addEventListener('submit', e => {
 });
 
 // ─── Año del copyright ─────────────────────────────────────────
-document.getElementById('copy').textContent = `© ${new Date().getFullYear()} JG Automatización. Todos los derechos reservados.`;
+document.getElementById('copy').textContent = `© ${new Date().getFullYear()} Jon Garcia. Todos los derechos reservados.`;
