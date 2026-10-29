@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JG Automatización — Ingeniería PLC & SCADA</title>
+  <meta name="description" content="Ingeniería de automatización industrial en Bilbao: programación PLC, sistemas SCADA, cuadros eléctricos y mantenimiento para infraestructura crítica e industria.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="img/hero-tunel-zaldibar-1600.webp" imagesrcset="img/hero-tunel-zaldibar-1600.webp 1600w, img/hero-tunel-zaldibar-2560.webp 2560w" imagesizes="(max-aspect-ratio: 16/9) 200vh, 112vw" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#inicio" class="brand">
+        <span class="brand-mark">JG</span>
+        <span class="brand-name">JG Automatización</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#metodo">Método</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn-light nav-cta">Contactar</a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#servicios">Servicios</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#metodo">Método</a>
+    <a href="#clientes">Clientes</a>
+    <a href="#contacto">Contactar</a>
+  </div>
+
+  <!-- HERO: carrusel de proyectos -->
+  <header class="hero" id="inicio">
+    <div class="hero-slides" id="heroSlides">
+      <figure class="slide" data-title="Túnel de Zaldíbar" data-tag="Infraestructura crítica">
+        <img src="img/hero-tunel-zaldibar-1600.webp" srcset="img/hero-tunel-zaldibar-1600.webp 1600w, img/hero-tunel-zaldibar-2560.webp 2560w" fetchpriority="high" sizes="(max-aspect-ratio: 16/9) 200vh, 112vw" alt="Túnel de Zaldíbar" decoding="async">
+      </figure>
+      <figure class="slide" data-title="Depuradora Incarlopsa" data-tag="Tratamiento de aguas">
+        <img data-src="img/hero-depuradora-1600.webp" data-srcset="img/hero-depuradora-1600.webp 1600w, img/hero-depuradora-2560.webp 2560w" sizes="(max-aspect-ratio: 16/9) 200vh, 112vw" alt="Depuradora Incarlopsa" decoding="async">
+      </figure>
+      <figure class="slide" data-title="Vidrala" data-tag="Industria del vidrio">
+        <img data-src="img/hero-vidrala-1600.webp" data-srcset="img/hero-vidrala-1600.webp 1600w, img/hero-vidrala-2560.webp 2560w" sizes="(max-aspect-ratio: 16/9) 200vh, 112vw" alt="Vidrala" decoding="async">
+      </figure>
+      <figure class="slide" data-title="Líneas Termopan" data-tag="Manufactura alimentaria">
+        <img data-src="img/hero-termopan-1600.webp" data-srcset="img/hero-termopan-1600.webp 1600w, img/hero-termopan-2560.webp 2560w" sizes="(max-aspect-ratio: 16/9) 200vh, 112vw" alt="Líneas Termopan" decoding="async">
+      </figure>
+      <figure class="slide" data-title="Bombeo Colegio Urdaneta" data-tag="Instalaciones deportivas">
+        <img data-src="img/hero-piscina-1600.webp" data-srcset="img/hero-piscina-1600.webp 1600w, img/hero-piscina-2560.webp 2560w" sizes="(max-aspect-ratio: 16/9) 200vh, 112vw" alt="Bombeo Colegio Urdaneta" decoding="async">
+      </figure>
+      <figure class="slide" data-title="Cuadros eléctricos" data-tag="Ingeniería eléctrica">
+        <img data-src="img/hero-cuadros-1600.webp" data-srcset="img/hero-cuadros-1600.webp 1600w, img/hero-cuadros-2560.webp 2560w" sizes="(max-aspect-ratio: 16/9) 200vh, 112vw" alt="Cuadros eléctricos" decoding="async">
+      </figure>
+    </div>
+    <div class="hero-shade"></div>
+
+    <div class="hero-content">
+      <p class="eyebrow">Automatización industrial · Bilbao</p>
+      <h1 class="hero-title">Ingeniería de control<br>para procesos que<br>no pueden parar.</h1>
+      <p class="hero-lead">Programación PLC, sistemas SCADA e integración industrial con tecnología Siemens para infraestructura crítica, tratamiento de aguas e industria.</p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-light">Solicitar presupuesto</a>
+        <a href="#proyectos" class="btn btn-ghost">Ver proyectos</a>
+      </div>
+    </div>
+
+    <div class="hero-foot">
+      <div class="hero-caption" id="heroCaption">
+        <span class="hc-tag"></span>
+        <span class="hc-title"></span>
+      </div>
+      <div class="hero-dots" id="heroDots" role="tablist" aria-label="Seleccionar proyecto"></div>
+    </div>
+  </header>
+
+  <!-- CIFRAS -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat reveal"><span class="stat-num" data-count="8">0</span><span class="stat-plus">+</span><p>Años en automatización industrial</p></div>
+      <div class="stat reveal"><span class="stat-num" data-count="12">0</span><span class="stat-plus">+</span><p>Clientes industriales e institucionales</p></div>
+      <div class="stat reveal"><span class="stat-num" data-count="10">0</span><span class="stat-plus">+</span><p>Proyectos de referencia</p></div>
+      <div class="stat reveal"><span class="stat-num" data-count="24">0</span><span class="stat-plus">/7</span><p>Supervisión de infraestructura crítica</p></div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow dark">Servicios</p>
+        <h2 class="sec-title">Del cuadro eléctrico<br>al centro de control.</h2>
+      </div>
+      <div class="services">
+        <article class="service reveal">
+          <span class="service-num">01</span>
+          <h3>Programación PLC</h3>
+          <p>Desarrollo y migración de software en Siemens S7-300, 400H, 1200, 1500 y 1500H redundante con TIA Portal y Step 7.</p>
+        </article>
+        <article class="service reveal">
+          <span class="service-num">02</span>
+          <h3>Sistemas SCADA</h3>
+          <p>Supervisión en tiempo real con WinCC OA, WinCC V7 y AVEVA System Platform. Alarmas, históricos e informes.</p>
+        </article>
+        <article class="service reveal">
+          <span class="service-num">03</span>
+          <h3>Integración y comunicaciones</h3>
+          <p>Redes Profinet, Profibus, Modbus TCP, OPC-UA, IO-Link y MQTT. Conectividad segura entre planta y oficina.</p>
+        </article>
+        <article class="service reveal">
+          <span class="service-num">04</span>
+          <h3>Migración de sistemas legacy</h3>
+          <p>Sustitución de arquitecturas obsoletas minimizando paradas de producción y garantizando la continuidad del servicio.</p>
+        </article>
+        <article class="service reveal">
+          <span class="service-num">05</span>
+          <h3>Cuadros eléctricos</h3>
+          <p>Diseño, montaje y mantenimiento preventivo y correctivo de cuadros e instalaciones eléctricas industriales.</p>
+        </article>
+        <article class="service reveal">
+          <span class="service-num">06</span>
+          <h3>Puesta en marcha y soporte</h3>
+          <p>Pruebas FAT/SAT, puesta en servicio, formación a operadores y mantenimiento evolutivo de sistemas existentes.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section class="section section-dark" id="proyectos">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Proyectos</p>
+        <h2 class="sec-title">Trabajo realizado.</h2>
+        <p class="sec-lead">Pasa el ratón por cada proyecto para ver el detalle.</p>
+      </div>
+      <div class="projects">
+        <figure class="project p-wide reveal" tabindex="0">
+          <img src="img/tunel-zaldibar.jpg" srcset="img/tunel-zaldibar-800.webp 800w, img/tunel-zaldibar-1600.webp 1600w, img/tunel-zaldibar-2560.webp 2560w" sizes="(min-width: 900px) 50vw, 100vw" alt="Túnel de Zaldíbar" loading="lazy" decoding="async">
+          <figcaption>
+            <span class="p-tag">Infraestructura crítica</span>
+            <h3>Túnel de Zaldíbar</h3>
+            <p>Migración completa a S7-1500H redundante con retirada de arquitectura legacy S7-300/400H. Implementación WinCC OA para monitorización en tiempo real.</p>
+          </figcaption>
+        </figure>
+        <figure class="project p-wide reveal" tabindex="0">
+          <img src="img/depuradora.jpg" srcset="img/depuradora-800.webp 800w, img/depuradora-1600.webp 1600w, img/depuradora-2560.webp 2560w" sizes="(min-width: 900px) 50vw, 100vw" alt="Depuradora Incarlopsa" loading="lazy" decoding="async">
+          <figcaption>
+            <span class="p-tag">Tratamiento de aguas</span>
+            <h3>Depuradora Incarlopsa</h3>
+            <p>Integración multiprotocolo sobre arquitectura híbrida S7-1500/1200/400/300. Control de reactor biológico secuencial con flotación por aire disuelto (DAF).</p>
+          </figcaption>
+        </figure>
+        <figure class="project reveal" tabindex="0">
+          <img src="img/termopan.jpg" srcset="img/termopan-800.webp 800w, img/termopan-1600.webp 1600w, img/termopan-2560.webp 2560w" sizes="(min-width: 900px) 33vw, 100vw" alt="Líneas de producción Termopan" loading="lazy" decoding="async">
+          <figcaption>
+            <span class="p-tag">Manufactura alimentaria</span>
+            <h3>Líneas Termopan</h3>
+            <p>Automatización de líneas de bollería industrial con S7-1500 y HMI Comfort Panel. Trazabilidad y control de calidad en tiempo real.</p>
+          </figcaption>
+        </figure>
+        <figure class="project reveal" tabindex="0">
+          <img src="img/vidrala.jpg" srcset="img/vidrala-800.webp 800w, img/vidrala-1600.webp 1600w, img/vidrala-2560.webp 2560w" sizes="(min-width: 900px) 33vw, 100vw" alt="Vidrala" loading="lazy" decoding="async">
+          <figcaption>
+            <span class="p-tag">Industria del vidrio</span>
+            <h3>Refrigeración Vidrala</h3>
+            <p>Control de precisión de bombas con S7-1200, comunicación segura IPSec y switch industrial Scalance 3G.</p>
+          </figcaption>
+        </figure>
+        <figure class="project reveal" tabindex="0">
+          <img src="img/piscina.jpg" srcset="img/piscina-800.webp 800w, img/piscina-1600.webp 1600w, img/piscina-2560.webp 2560w" sizes="(min-width: 900px) 33vw, 100vw" alt="Sistema de bombeo de piscina" loading="lazy" decoding="async">
+          <figcaption>
+            <span class="p-tag">Instalaciones deportivas</span>
+            <h3>Bombeo Colegio Urdaneta</h3>
+            <p>Recirculación y tratamiento de agua con S7-1200: caudales, dosificación química y gestión energética.</p>
+          </figcaption>
+        </figure>
+        <figure class="project reveal" tabindex="0">
+          <img src="img/cuadros.jpg" srcset="img/cuadros-800.webp 800w, img/cuadros-1600.webp 1600w, img/cuadros-2560.webp 2560w" sizes="(min-width: 900px) 33vw, 100vw" alt="Cuadros eléctricos" loading="lazy" decoding="async">
+          <figcaption>
+            <span class="p-tag">Ingeniería eléctrica</span>
+            <h3>Cuadros eléctricos</h3>
+            <p>Mantenimiento preventivo y correctivo de instalaciones y cuadros eléctricos industriales.</p>
+          </figcaption>
+        </figure>
+        <figure class="project reveal" tabindex="0">
+          <img src="img/tunel-avanzada.jpg" srcset="img/tunel-avanzada-800.webp 800w, img/tunel-avanzada-1600.webp 1600w" sizes="(min-width: 900px) 33vw, 100vw" alt="Túnel de Avanzada" loading="lazy" decoding="async">
+          <figcaption>
+            <span class="p-tag">Infraestructura vial</span>
+            <h3>Túnel de Avanzada</h3>
+            <p>Mantenimiento integral del SCADA WinCC OA: ventilación, iluminación y sistemas de seguridad.</p>
+          </figcaption>
+        </figure>
+        <figure class="project reveal" tabindex="0">
+          <img src="img/metro-bilbao.jpg" srcset="img/metro-bilbao-800.webp 800w" sizes="(min-width: 900px) 33vw, 100vw" alt="Metro de Bilbao" loading="lazy" decoding="async">
+          <figcaption>
+            <span class="p-tag">Transporte metropolitano</span>
+            <h3>Metro de Bilbao</h3>
+            <p>Modernización de instalaciones de estaciones con sistemas de aparcabicicletas inteligentes.</p>
+          </figcaption>
+        </figure>
+        <figure class="project reveal" tabindex="0">
+          <img src="img/cc-gerediaga.jpg" srcset="img/cc-gerediaga-800.webp 800w, img/cc-gerediaga-1600.webp 1600w" sizes="(min-width: 900px) 33vw, 100vw" alt="Centro de control Gerediaga" loading="lazy" decoding="async">
+          <figcaption>
+            <span class="p-tag">Centro de control</span>
+            <h3>Centro de control Gerediaga</h3>
+            <p>Mantenimiento evolutivo del SCADA de supervisión vial e integración de nuevos dispositivos.</p>
+          </figcaption>
+        </figure>
+        <figure class="project reveal" tabindex="0">
+          <img src="img/cc-mkz.jpg" srcset="img/cc-mkz-800.webp 800w" sizes="(min-width: 900px) 33vw, 100vw" alt="Centro de control MKZ" loading="lazy" decoding="async">
+          <figcaption>
+            <span class="p-tag">Supervisión territorial</span>
+            <h3>Centro de control MKZ</h3>
+            <p>SCADA para la red viaria provincial: monitorización 24/7 de túneles y sistemas ITS con respuesta en tiempo real.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTODO -->
+  <section class="section" id="metodo">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow dark">Método</p>
+        <h2 class="sec-title">Cómo trabajamos.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal"><span class="step-num">01</span><h3>Análisis</h3><p>Visitamos la instalación, revisamos la documentación existente y definimos requisitos contigo.</p></li>
+        <li class="step reveal"><span class="step-num">02</span><h3>Ingeniería</h3><p>Arquitectura de control, programación PLC y SCADA, pruebas en oficina (FAT).</p></li>
+        <li class="step reveal"><span class="step-num">03</span><h3>Puesta en marcha</h3><p>Instalación en planta con el mínimo impacto en producción y pruebas SAT.</p></li>
+        <li class="step reveal"><span class="step-num">04</span><h3>Soporte</h3><p>Documentación, formación a operadores y mantenimiento evolutivo.</p></li>
+      </ol>
+
+      <div class="tech reveal">
+        <p class="tech-label">Tecnologías</p>
+        <ul class="tech-list">
+          <li>TIA Portal</li><li>Step 7</li><li>WinCC OA</li><li>WinCC V7</li><li>AVEVA System Platform</li>
+          <li>Profinet</li><li>Profibus</li><li>Modbus TCP</li><li>OPC-UA</li><li>IO-Link</li><li>MQTT</li><li>MariaDB</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTES -->
+  <section class="section section-soft" id="clientes">
+    <div class="container">
+      <div class="sec-head sec-head-row reveal">
+        <div>
+          <p class="eyebrow dark">Clientes</p>
+          <h2 class="sec-title">Confían en nosotros.</h2>
+        </div>
+        <p class="sec-lead dark">Empresas industriales e instituciones públicas del País Vasco y de toda España.</p>
+      </div>
+      <div class="clients reveal">
+        <div class="client"><img src="../Clientes/Logo_Metro_Bilbao.png" alt="Metro Bilbao" loading="lazy"><span>Transporte</span></div>
+        <div class="client"><img src="../Clientes/diputacion_bizkaia.jpg" alt="Diputación Foral de Bizkaia" loading="lazy"><span>Administración pública</span></div>
+        <div class="client"><img src="../Clientes/Sidenor.png" alt="Sidenor" loading="lazy"><span>Siderurgia</span></div>
+        <div class="client"><img src="../Clientes/Vidrala.jpg" alt="Vidrala" loading="lazy"><span>Vidrio</span></div>
+        <div class="client"><img src="../Clientes/incarlopsa.png" alt="Incarlopsa" loading="lazy"><span>Alimentación</span></div>
+        <div class="client"><img src="../Clientes/Artiach.png" alt="Artiach" loading="lazy"><span>Alimentación</span></div>
+        <div class="client"><img src="../Clientes/Sarralle.png" alt="Sarralle" loading="lazy"><span>Ingeniería</span></div>
+        <div class="client"><img src="../Clientes/cobra.jpg" alt="Cobra" loading="lazy"><span>Infraestructuras</span></div>
+        <div class="client"><img src="../Clientes/Interbiak.png" alt="Interbiak" loading="lazy"><span>Carreteras</span></div>
+        <div class="client"><img src="../Clientes/hidroambiente.png" alt="Hidroambiente" loading="lazy"><span>Medio ambiente</span></div>
+        <div class="client"><img src="../Clientes/Envases.png" alt="Envases" loading="lazy"><span>Packaging</span></div>
+        <div class="client"><img src="../Clientes/Mayasa.png" alt="Mayasa" loading="lazy"><span>Minería</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section section-dark" id="contacto">
+    <div class="container contact">
+      <div class="reveal">
+        <p class="eyebrow">Contacto</p>
+        <h2 class="sec-title">¿Tienes un proyecto<br>en mente?</h2>
+        <p class="sec-lead">Cuéntanos qué necesitas y te respondemos en menos de 24 horas laborables.</p>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:cv@elprogramador.es">cv@elprogramador.es</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/jon-g-482862229/" target="_blank" rel="noopener">Jon Garcia</a></li>
+          <li><span>Ubicación</span><p>Bilbao, Bizkaia</p></li>
+        </ul>
+      </div>
+      <form class="form reveal" id="contactForm">
+        <label>Nombre<input type="text" name="nombre" required autocomplete="name"></label>
+        <label>Empresa<input type="text" name="empresa" autocomplete="organization"></label>
+        <label>Email<input type="email" name="email" required autocomplete="email"></label>
+        <label>Mensaje<textarea name="mensaje" rows="4" required></textarea></label>
+        <button type="submit" class="btn btn-light">Enviar mensaje</button>
+        <p class="form-note">Al enviar se abrirá tu cliente de correo con el mensaje preparado.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#inicio" class="brand"><span class="brand-mark">JG</span><span class="brand-name">JG Automatización</span></a>
+      <p id="copy">© 2026 JG Automatización. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
