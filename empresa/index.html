@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jon Garcia — Técnico en automatización PLC & SCADA</title>
   <meta name="description" content="Técnico independiente en automatización industrial en Bilbao: programación PLC, sistemas SCADA, cuadros eléctricos y mantenimiento para infraestructura crítica e industria.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" href="img/hero-tunel-zaldibar-1600.webp" imagesrcset="img/hero-tunel-zaldibar-1600.webp 1600w, img/hero-tunel-zaldibar-2560.webp 2560w" imagesizes="(max-aspect-ratio: 16/9) 200vh, 112vw" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -67,7 +66,7 @@
       <h1 class="hero-title">Automatización<br>para procesos que<br>no pueden parar.</h1>
       <p class="hero-lead">Soy Jon, técnico especialista en programación PLC y sistemas SCADA con tecnología Siemens. Trabajo por mi cuenta, con trato directo y sin intermediarios: quien te hace el presupuesto es quien programa y pone en marcha tu instalación.</p>
       <div class="hero-actions">
-        <a href="#contacto" class="btn btn-light">Solicitar presupuesto</a>
+        <a href="#contacto" class="btn btn-light">Hablemos</a>
         <a href="#proyectos" class="btn btn-ghost">Ver proyectos</a>
       </div>
     </div>
@@ -295,6 +294,7 @@
         <label>Empresa<input type="text" name="empresa" autocomplete="organization"></label>
         <label>Email<input type="email" name="email" required autocomplete="email"></label>
         <label>Mensaje<textarea name="mensaje" rows="4" required></textarea></label>
+        <label class="check"><input type="checkbox" name="privacidad" required><span>He leído y acepto la <a href="legal.html#privacidad">política de privacidad</a>.</span></label>
         <button type="submit" class="btn btn-light">Enviar mensaje</button>
         <p class="form-note">Al enviar se abrirá tu cliente de correo con el mensaje preparado.</p>
       </form>
@@ -304,6 +304,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <a href="#inicio" class="brand"><span class="brand-mark">JG</span><span class="brand-name">Jon Garcia</span></a>
+      <nav class="footer-links"><a href="legal.html#aviso-legal">Aviso legal</a><a href="legal.html#privacidad">Privacidad</a><a href="legal.html#cookies">Cookies</a></nav>
       <p id="copy">© 2026 Jon Garcia. Todos los derechos reservados.</p>
     </div>
   </footer>
