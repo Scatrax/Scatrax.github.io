@@ -219,15 +219,6 @@ ul, ol { list-style: none; }
 .project:hover figcaption, .project:focus-visible figcaption { background: rgba(11, 11, 12, .78); }
 .project:hover p, .project:focus-visible p { max-height: 160px; opacity: 1; transform: none; margin-top: 12px; }
 .project:focus-visible { box-shadow: 0 0 0 2px var(--white); }
-/* Proyecto sin foto: tarjeta tipográfica con cifras */
-.project.p-text { border: 1px solid var(--line-dark); background:
-  repeating-linear-gradient(90deg, rgba(255,255,255,.04) 0 1px, transparent 1px 48px), var(--graphite); }
-.p-figures { position: absolute; top: 28px; left: 28px; right: 28px; display: flex; gap: 40px; transition: opacity .4s; }
-.p-figures strong { display: block; font: 600 56px/1 var(--display); letter-spacing: -.04em; }
-.p-figures span { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted-light); }
-.p-text figcaption { background: none; }
-.p-text:hover figcaption, .p-text:focus-visible figcaption { background: rgba(11, 11, 12, .55); }
-.p-text:hover .p-figures, .p-text:focus-visible .p-figures { opacity: 0; }
 @media (min-width: 900px) {
   .projects { grid-template-columns: repeat(6, 1fr); }
   .project { grid-column: span 2; }
