@@ -124,5 +124,12 @@ copyBtn.addEventListener('click', () => {
   });
 });
 
+// ─── Años de experiencia: se calculan solos desde enero de 2020 ──
+const CAREER_START = new Date(2020, 0, 1);
+const now = new Date();
+let years = now.getFullYear() - CAREER_START.getFullYear();
+if (now < new Date(now.getFullYear(), CAREER_START.getMonth(), CAREER_START.getDate())) years--;
+document.getElementById('years').textContent = `${years} años`;
+
 // ─── Año del copyright ─────────────────────────────────────────
 document.getElementById('copy').textContent = `© ${new Date().getFullYear()} Jon Garcia. Todos los derechos reservados.`;
