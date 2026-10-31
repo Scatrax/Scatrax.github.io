@@ -1,41 +1,135 @@
-// ─── Auto-calculate age (nacido en 1997) ─────────────────────
-const birthYear = 1997, birthMonth = 0, birthDay = 1; // ajusta mes/día si quieres
-const today = new Date();
-let age = today.getFullYear() - birthYear;
-if (today.getMonth() < birthMonth || (today.getMonth() === birthMonth && today.getDate() < birthDay)) age--;
-document.querySelectorAll('#edad, #edad2').forEach(el => el.textContent = age);
+// ─── Hero carousel: fundido + desplazamiento derecha → izquierda ─
+const SLIDE_MS = 6000;
+const slides = [...document.querySelectorAll('#heroSlides .slide')];
+const dotsBox = document.getElementById('heroDots');
+const caption = document.getElementById('heroCaption');
+let current = 0, timer;
 
-// ─── Scroll reveal on viewport entry ─────────────────────────
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('in');
-      io.unobserve(e.target);
-    }
+dotsBox.style.setProperty('--slide-ms', SLIDE_MS + 'ms');
+const dots = slides.map((s, i) => {
+  const b = document.createElement('button');
+  b.className = 'hero-dot';
+  b.setAttribute('aria-label', s.dataset.title);
+  b.addEventListener('click', () => { goTo(i); restart(); });
+  dotsBox.appendChild(b);
+  return b;
+});
+
+function setCaption(slide) {
+  caption.classList.add('fade');
+  setTimeout(() => {
+    caption.querySelector('.hc-tag').textContent = slide.dataset.tag;
+    caption.querySelector('.hc-title').textContent = slide.dataset.title;
+    caption.classList.remove('fade');
+  }, 400);
+}
+
+function goTo(i) {
+  const prev = slides[current];
+  if (i !== current) {
+    slides.forEach(s => s.classList.remove('leaving'));
+    prev.classList.remove('active');
+    prev.classList.add('leaving');
+  }
+  current = i;
+  const next = slides[current];
+  loadSlide(next);
+  // Reinicia la animación de desplazamiento
+  next.classList.remove('active');
+  void next.offsetWidth;
+  next.classList.add('active');
+  dots.forEach((d, k) => {
+    d.classList.remove('active');
+    if (k === current) { void d.offsetWidth; d.classList.add('active'); }
   });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  setCaption(next);
+}
 
-// ─── Compact navbar on scroll ────────────────────────────────
+function restart() {
+  clearInterval(timer);
+  timer = setInterval(() => goTo((current + 1) % slides.length), SLIDE_MS);
+}
+
+// Las imágenes del resto de diapositivas se cargan cuando la página ya está lista
+function loadSlide(slide) {
+  const img = slide.querySelector('img[data-src]');
+  if (!img) return;
+  img.srcset = img.dataset.srcset;
+  img.src = img.dataset.src;
+  img.removeAttribute('data-src');
+}
+window.addEventListener('load', () => slides.forEach(loadSlide));
+
+goTo(0);
+restart();
+document.addEventListener('visibilitychange', () => document.hidden ? clearInterval(timer) : restart());
+
+// ─── Navbar sólida al hacer scroll ─────────────────────────────
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('compact', scrollY > 60));
+const onScroll = () => nav.classList.toggle('solid', scrollY > 40);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
-// ─── Active nav link highlight ───────────────────────────────
-const secs = document.querySelectorAll('section[id], header[id]');
+// ─── Enlace activo en el menú ──────────────────────────────────
+const secs = document.querySelectorAll('section[id]');
 const links = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
   let cur = '';
-  secs.forEach(s => { if (scrollY >= s.offsetTop - 120) cur = s.id; });
+  secs.forEach(s => { if (scrollY >= s.offsetTop - 140) cur = s.id; });
   links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+}, { passive: true });
+
+// ─── Menú móvil ────────────────────────────────────────────────
+const burger = document.getElementById('burger');
+const mobileNav = document.getElementById('mobileNav');
+burger.addEventListener('click', () => {
+  const open = mobileNav.classList.toggle('open');
+  burger.classList.toggle('open', open);
+  burger.setAttribute('aria-expanded', open);
+});
+mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mobileNav.classList.remove('open');
+  burger.classList.remove('open');
+  burger.setAttribute('aria-expanded', false);
+}));
+
+// ─── Aparición al hacer scroll + contadores ────────────────────
+function countUp(el) {
+  const end = +el.dataset.count, start = performance.now(), dur = 1400;
+  const tick = now => {
+    const p = Math.min((now - start) / dur, 1);
+    el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+    if (p < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in');
+    e.target.querySelectorAll('[data-count]').forEach(countUp);
+    io.unobserve(e.target);
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// ─── Copiar la dirección de email ──────────────────────────────
+const copyBtn = document.getElementById('copyEmail');
+copyBtn.addEventListener('click', () => {
+  const email = document.getElementById('contactEmail').textContent;
+  const done = () => { copyBtn.textContent = 'Copiada'; setTimeout(() => copyBtn.textContent = 'Copiar dirección', 2000); };
+  navigator.clipboard.writeText(email).then(done, () => {
+    const r = document.createRange(); r.selectNodeContents(document.getElementById('contactEmail'));
+    const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+  });
 });
 
-// ─── Mobile burger menu ──────────────────────────────────────
-document.getElementById('burger').addEventListener('click', () =>
-  document.getElementById('mobileNav').classList.toggle('open'));
+// ─── Años de experiencia: se calculan solos desde enero de 2020 ──
+const CAREER_START = new Date(2020, 0, 1);
+const now = new Date();
+let years = now.getFullYear() - CAREER_START.getFullYear();
+if (now < new Date(now.getFullYear(), CAREER_START.getMonth(), CAREER_START.getDate())) years--;
+document.getElementById('years').textContent = `${years} años`;
 
-document.querySelectorAll('#mobileNav a').forEach(a =>
-  a.addEventListener('click', () => document.getElementById('mobileNav').classList.remove('open')));
-
-// ─── Auto-update copyright year ──────────────────────────────
-const currentYear = new Date().getFullYear();
-document.querySelector('.footer-txt').textContent = `© ${currentYear} Jon Garcia — Todos los derechos reservados.`;
+// ─── Año del copyright ─────────────────────────────────────────
+document.getElementById('copy').textContent = `© ${new Date().getFullYear()} Jon Garcia. Todos los derechos reservados.`;
