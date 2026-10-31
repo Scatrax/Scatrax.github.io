@@ -113,13 +113,15 @@ const io = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-// ─── Formulario: abre el correo con el mensaje preparado ──────
-document.getElementById('contactForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const f = new FormData(e.target);
-  const subject = `Consulta web — ${f.get('empresa') || f.get('nombre')}`;
-  const body = `Nombre: ${f.get('nombre')}\nEmpresa: ${f.get('empresa')}\nEmail: ${f.get('email')}\n\n${f.get('mensaje')}`;
-  location.href = `mailto:cv@elprogramador.es?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+// ─── Copiar la dirección de email ──────────────────────────────
+const copyBtn = document.getElementById('copyEmail');
+copyBtn.addEventListener('click', () => {
+  const email = document.getElementById('contactEmail').textContent;
+  const done = () => { copyBtn.textContent = 'Copiada'; setTimeout(() => copyBtn.textContent = 'Copiar dirección', 2000); };
+  navigator.clipboard.writeText(email).then(done, () => {
+    const r = document.createRange(); r.selectNodeContents(document.getElementById('contactEmail'));
+    const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+  });
 });
 
 // ─── Año del copyright ─────────────────────────────────────────

@@ -45,7 +45,7 @@ ul, ol { list-style: none; }
 }
 .btn-light { background: var(--white); color: var(--black); }
 .btn-light:hover { background: #dcdcd9; }
-.btn-ghost { color: var(--white); border-color: rgba(255, 255, 255, .45); }
+.btn-ghost { background: transparent; color: var(--white); border-color: rgba(255, 255, 255, .45); }
 .btn-ghost:hover { background: rgba(255, 255, 255, .1); border-color: var(--white); }
 
 .eyebrow {
@@ -271,19 +271,12 @@ ul, ol { list-style: none; }
 .contact-list li { display: flex; justify-content: space-between; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--line-dark); }
 .contact-list span { color: var(--muted-light); font-size: 14px; }
 .contact-list a:hover { text-decoration: underline; text-underline-offset: 4px; }
-.form { display: grid; gap: 18px; padding: 40px; background: var(--graphite); border-radius: var(--radius); }
-.form label { display: grid; gap: 8px; font-size: 13px; color: var(--muted-light); }
-.form input, .form textarea {
-  font: 400 15px/1.4 var(--body); color: var(--white);
-  background: transparent; border: 0; border-bottom: 1px solid rgba(255, 255, 255, .25);
-  padding: 10px 0; resize: vertical; transition: border-color .2s;
-}
-.form input:focus, .form textarea:focus { outline: none; border-color: var(--white); }
-.form .btn { margin-top: 8px; justify-self: start; }
-.form-note { font-size: 12px; color: rgba(255, 255, 255, .45); }
-.form .check { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; line-height: 1.5; }
-.form .check input { appearance: auto; border: 0; width: 16px; height: 16px; margin-top: 2px; padding: 0; accent-color: var(--white); flex: none; }
-.form .check a, .legal a { text-decoration: underline; text-underline-offset: 3px; }
+.contact-card { display: grid; gap: 20px; padding: 40px; background: var(--graphite); border-radius: var(--radius); }
+.cc-label { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted-light); }
+.cc-email { font: 600 clamp(22px, 2.6vw, 32px)/1.2 var(--display); letter-spacing: -.02em; overflow-wrap: anywhere; user-select: all; }
+.cc-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.cc-note { font-size: 13px; color: rgba(255, 255, 255, .5); }
+.legal a { text-decoration: underline; text-underline-offset: 3px; }
 .footer-links { display: flex; gap: 24px; font-size: 13px; color: var(--muted-light); }
 .footer-links a:hover { color: var(--white); }
 
@@ -350,7 +343,7 @@ ul, ol { list-style: none; }
   .client:nth-child(2n) { border-right: 0; }
   .client:nth-last-child(-n+3) { border-bottom: 1px solid var(--line); }
   .client:nth-last-child(-n+2) { border-bottom: 0; }
-  .form { padding: 28px 20px; }
+  .contact-card { padding: 28px 20px; }
 }
 
 /* En pantallas táctiles no hay "hover": mostramos la descripción siempre */

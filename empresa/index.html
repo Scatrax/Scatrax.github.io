@@ -25,7 +25,7 @@
         <li><a href="#metodo">Cómo trabajo</a></li>
         <li><a href="#clientes">Clientes</a></li>
       </ul>
-      <a href="#contacto" class="btn btn-light nav-cta">Contactar</a>
+      <a href="mailto:cv@elprogramador.es?subject=Contacto%20desde%20la%20web" class="btn btn-light nav-cta">Contactar</a>
       <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
     </div>
   </nav>
@@ -34,7 +34,7 @@
     <a href="#proyectos">Proyectos</a>
     <a href="#metodo">Cómo trabajo</a>
     <a href="#clientes">Clientes</a>
-    <a href="#contacto">Contactar</a>
+    <a href="mailto:cv@elprogramador.es?subject=Contacto%20desde%20la%20web">Contactar</a>
   </div>
 
   <!-- HERO: carrusel de proyectos -->
@@ -63,7 +63,7 @@
       <h1 class="hero-title">Automatización<br>para procesos que<br>no pueden parar.</h1>
       <p class="hero-lead">Soy Jon, técnico especialista en programación PLC y sistemas SCADA con tecnología Siemens. Experiencia en infraestructura crítica, túneles, centros de control, tratamiento de aguas e industria.</p>
       <div class="hero-actions">
-        <a href="#contacto" class="btn btn-light">Hablemos</a>
+        <a href="mailto:cv@elprogramador.es?subject=Contacto%20desde%20la%20web" class="btn btn-light">Hablemos</a>
         <a href="#proyectos" class="btn btn-ghost">Ver proyectos</a>
       </div>
     </div>
@@ -285,20 +285,19 @@
         <h2 class="sec-title">¿Tienes un proyecto<br>en mente?</h2>
         <p class="sec-lead">Cuéntame qué necesitas y te respondo en menos de 24 horas laborables.</p>
         <ul class="contact-list">
-          <li><span>Email</span><a href="mailto:cv@elprogramador.es">cv@elprogramador.es</a></li>
           <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/jon-g-482862229/" target="_blank" rel="noopener">Jon Garcia</a></li>
           <li><span>Ubicación</span><p>Bilbao, Bizkaia</p></li>
         </ul>
       </div>
-      <form class="form reveal" id="contactForm">
-        <label>Nombre<input type="text" name="nombre" required autocomplete="name"></label>
-        <label>Empresa<input type="text" name="empresa" autocomplete="organization"></label>
-        <label>Email<input type="email" name="email" required autocomplete="email"></label>
-        <label>Mensaje<textarea name="mensaje" rows="4" required></textarea></label>
-        <label class="check"><input type="checkbox" name="privacidad" required><span>He leído y acepto la <a href="legal.html#privacidad">política de privacidad</a>.</span></label>
-        <button type="submit" class="btn btn-light">Enviar mensaje</button>
-        <p class="form-note">Al enviar se abrirá tu cliente de correo con el mensaje preparado.</p>
-      </form>
+      <div class="contact-card reveal">
+        <p class="cc-label">Escríbeme directamente</p>
+        <p class="cc-email" id="contactEmail">cv@elprogramador.es</p>
+        <div class="cc-actions">
+          <a href="mailto:cv@elprogramador.es?subject=Contacto%20desde%20la%20web" class="btn btn-light">Escribir un email</a>
+          <button type="button" class="btn btn-ghost" id="copyEmail">Copiar dirección</button>
+        </div>
+        <p class="cc-note">Se abrirá tu programa de correo. Si usas el correo desde el navegador, copia la dirección.</p>
+      </div>
     </div>
   </section>
 
